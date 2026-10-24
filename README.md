@@ -1,9 +1,9 @@
 # Library Management System — Express API
 
 REST API for a small library management system: create, list, update and delete books and
-library members. It implements the same API contract as the
-[Spring Boot version](https://github.com/tizreal/LibraryAppBackend), so the
-[React frontend](https://github.com/tizreal/LibraryApp) can run against either backend.
+library members. It exposes the same endpoints and database schema as the
+[Spring Boot version](https://github.com/tizreal/LibraryAppBackend), which the
+[React frontend](https://github.com/tizreal/LibraryApp) is built against.
 
 ## Tech stack
 
@@ -43,8 +43,9 @@ cp .env.example .env    # set DB_HOST, DB_PORT, DB_NAME, DB_USER, DB_PASSWORD, P
 npm run dev             # http://localhost:3000, restarts on changes (nodemon)
 ```
 
-Use `npm start` to run without nodemon. To use it with the frontend, set the frontend's
-`VITE_API_URL` to `http://localhost:3000`.
+Use `npm start` to run without nodemon. The frontend can point at it with
+`VITE_API_URL=http://localhost:3000`; books work fully, but the members username field is
+`user_name` here and `user_name_string` in the Spring Boot API the frontend uses.
 
 ## Project structure
 
